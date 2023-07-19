@@ -22,11 +22,9 @@ A dive into the View Transitions API: Explore its workflow, animations, room for
 
 ## Preview
 
-<!-- demonstration -->
+https://github.com/antonioalanxs/View-Transitions-API/assets/79718376/42c4d2c3-431b-49b6-9cc8-7a731e84ba25
 
 Check if your browser supports View Transitions API by [clicking here](https://caniuse.com/?search=View%20Transitions%20API). If not, you can enable the flag `chrome://flags/#document-transition` before taking the demonstration for a spin.
-
-<!-- link -->
 
 [Go to the article](#article).
 
@@ -223,9 +221,7 @@ We have introduced the fundamental aspects of the API. Although, if you desire m
 
 The article introduces the [View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/), enabling smooth web page transitions. It currently only supports SPAs, but the article demonstrates how to adapt MPAs into pseudo-SPAs to utilize the API. It covers the workflow and animations of the API, along with addressing issues like latency and race conditions. The advantages include efficient handling of page transitions for SPAs by reducing JavaScript usage and improved performance. Additionally, the future support for MPAs will enable seamless transitioning between server-side rendered pages without JavaScript involvement.
 
-<!-- Books Recommendation MPA link -->
-
-The author has also created a simply Books Recommendation MPA for live demonstration of the API features. [Go to preview](#preview).
+The author has also created a simply [Books Recommendation MPA for live demonstration](#preview) of the API features. [Go to preview](#preview).
 
 ## License
 
