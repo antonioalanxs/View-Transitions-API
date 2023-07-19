@@ -1,0 +1,12 @@
+---
+export interface Props {
+  author: string;
+}
+
+const { author } = Astro.props;
+---
+
+<p class="mt-4 text-lg opacity-70">
+    <strong>by</strong>
+    <span class="font-semibold text-gray-800">{author}</span>
+</p>

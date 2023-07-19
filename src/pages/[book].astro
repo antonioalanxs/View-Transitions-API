@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GoBackButton from "../components/GoBackButton.astro";
+import Title from "../components/Title.astro";
+import BookImage from "../components/BookImage.astro";
+import Author from "../components/Author.astro";
+import Footer from "../components/Footer.astro";
+
+import { books } from "../data";
+
+const { book } = Astro.params;
+
+const info = books.find((b) => b.id === book);
+
+if (!info) {
+    return Astro.redirect("/error");
+}
+---
+
+<Layout title={info.title}>
+    <GoBackButton />
+    <h1 class="py-5 3md:pt-6 3md:pb-12">
+        <Title isSmall={true} />
+    </h1>
+    <main
+        class="max-w-4xl mx-auto my-0 px-8 3md:px-0 grid gap-7 3md:gap-14 grid-cols-1 3md:grid-cols-book-text"
+    >
+        <picture class="justify-self-center self-baseline max-w-xs 3md:mt-align-book-text">
+            <BookImage id={info.id} title={info.title} img={info.img} />
+        </picture>
+        <aside class="justify-self-center 3md:justify-self-start max-w-prose" style="text-wrap: balance;">
+            <h1 class="text-4xl font-black">{info.title}</h1>
+            <Author author={info.author} />
+            <p class="mt-5">{info.opinion}</p>
+        </aside>
+    </main>
+    <Footer />
+</Layout>

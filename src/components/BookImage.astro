@@ -1,0 +1,17 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  img: string;
+}
+
+const { id, title, img } = Astro.props;
+---
+
+<img
+    src={img}
+    alt={`Cover image for ${title}`}
+    loading="lazy"
+    class="aspect-book w-full h-full object-cover rounded"
+    style={`view-transition-name: book-${id}`}
+/>

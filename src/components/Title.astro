@@ -1,0 +1,22 @@
+---
+export interface Props {
+    isSmall?: boolean;
+}
+
+const { isSmall = false } = Astro.props;
+
+let classes = "block max-w-sm mx-auto my-0 hover:scale-105 transition-transform";
+
+if (isSmall) {
+    classes += " scale-85 hover:scale-90";
+}
+---
+
+<a href="/" class={classes}>
+    <img
+        src="/title.svg"
+        alt="Recommended Books"
+        class="w-full h-full object-cover"
+        style="view-transition-name: title"
+    />
+</a>

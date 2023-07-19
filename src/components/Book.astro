@@ -1,0 +1,18 @@
+---
+import BookImage from './BookImage.astro';
+
+export interface Props {
+  id: string;
+  title: string;
+  img: string;
+}
+
+const { id, title, img } = Astro.props;
+---
+
+<a
+  href={`/${id}`}
+  class="inline-block transition-all hover:scale-105 hover:shadow-2xl hover:contrast-125"
+> 
+  <BookImage id={id} title={title} img={img} />
+</a>

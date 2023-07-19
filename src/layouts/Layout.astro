@@ -1,0 +1,49 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+
+		<meta name="view-transition" content="same-origin" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<title>{title}</title>
+
+		<link rel="preload" href="/clean-code.webp" as="image" />
+		<link rel="preload" href="/aprendiendo-git.webp" as="image" />
+		<link rel="preload" href="/design-patterns.webp" as="image" />
+		<link
+			rel="preload"
+			href="/cracking-the-coding-interview.webp"
+			as="image"
+		/>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #f6f6f6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
+
+<script>
+	import "../scripts/viewTransitions.js";
+</script>
